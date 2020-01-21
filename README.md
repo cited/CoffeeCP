@@ -1,5 +1,9 @@
 # CoffeeCP - Java for cPanel
 
+![CoffeeCP](https://www.acugis.com/coffeecp/assets/img/logo.jpg)
+
+
+
 Provision Tomcat, GlassFish, and WildFly on cPanel instantly. 
 
 Users access all components via cPanel. No extra control panels to install. 
