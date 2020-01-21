@@ -130,5 +130,5 @@ VAR_END
 }
 
 install_coffeecp;
-#install_jdks; #For Oracle JDK only
+#install_jdks; #For Oracle JDK only!
 install_openjdks;
