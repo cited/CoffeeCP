@@ -19,7 +19,7 @@ SSH to your server as root and issue the following commands.
 
  
 
-wget https://files.coffeecp.com/coffeecp_install.sh
+wget https://github.com/cited/CoffeeCP/blob/master/coffeecp-install.sh
 
 chmod +x coffeecp_install.sh
 
