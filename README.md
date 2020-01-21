@@ -58,6 +58,6 @@ You will be prompted for the username, domain, and the amount of heap space (mem
 
  
 
-For full documentation, see our Docs.
+For full documentation, see our *[Docs](https://www.acugis.com/coffeecp/docs/)*.
 
 &copy; Cited, Inc. 2017-2020
