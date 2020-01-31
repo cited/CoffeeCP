@@ -34,7 +34,7 @@ chmod +x coffeecp_install.sh
 
  
 
-wget https://raw.githubusercontent.com/cited/CoffeeCP/blob/master/coffeecp-create-user.sh
+wget https://raw.githubusercontent.com/cited/CoffeeCP/master/coffeecp-create-user.sh
 
 chmod +x coffeecp_create_user.sh
 
