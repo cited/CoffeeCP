@@ -1,0 +1,60 @@
+#!/bin/bash
+ 
+function build_installed_json(){
+	local user=${1}
+ 
+	JDK_VER=$(grep -m1 '^export JAVA_HOME' ${CATALINA_HOME}/bin/catalina.sh | sed  's/.*jdk\([0-9\._]\+\)\//\1/')
+	TOM_VER=$(cat ${CATALINA_HOME}/RELEASE-NOTES | sed -n 's/[ \t]\+Apache Tomcat Version \([0-9\.]\+\)/\1/p')
+
+        MEMORY=$(grep -m1 '^export JAVA_OPTS' ${CATALINA_HOME}/bin/catalina.sh | cut -f2 -d= | sed 's/"/\"/g')
+	VALUE=$(echo "${MEMORY}" | sed 's/.*-Xmx\([1-9]\+\)000000.*/\1/')
+        SAASE_FILE="/home/${user}/appservers/private/saase.properties"
+
+        AJP_PORT=$(sed   -n 's/^ajp_port=\([0-9\]\+\)$/\1/p' ${SAASE_FILE})
+	HTTP_PORT=$(sed  -n 's/^http_port=\([0-9]\+\)$/\1/p' ${SAASE_FILE})
+	HTTPS_PORT=$(sed -n 's/^ssl_port=\([0-9]\+\)$/\1/p'  ${SAASE_FILE})
+	SHUTDOWN_PORT=$(sed -n 's/^appsrvr\.admin_port=\([0-9]\+\)$/\1/p'  ${SAASE_FILE})
+
+
+ 
+	cat >"/home/${user}/is_migrated.json" <<EOF
+{
+   "jdk" : {
+      "name" : "JDK",
+      "version" : "${JDK_VER:2}",
+      "path" : "/usr/java/jdk${JDK_VER}/"
+   },
+   "server" : {
+      "path" : "/usr/coffeecp/appfiles/apache-tomcat-${TOM_VER}.tar.gz",
+      "version" : "${TOM_VER}",
+      "type" : 1,
+      "folder_name" : "apache-tomcat-${TOM_VER}",
+      "name" : "Tomcat"
+   },
+{
+   "memory" : "${MEMORY}",
+   "value" : "${VALUE}",
+   "ports" : {
+      "ajp" : "${AJP_PORT}",
+      "shutdow" : "${SHUTDOWN_PORT}",
+      "https" : "${HTTPS_PORT}",
+      "http" : "${HTTP_PORT}"
+   }
+}
+EOF
+} 
+
+chown ${user}:${user} /home/${user}/is_migrated.json
+
+for user in $(ls /home); do
+ 
+	if [ ! -d /home/${user}/appservers/ ]; then
+		continue;
+	fi
+ 
+	CATALINA_HOME=$(find /home/${user}/appservers/ -type d -name 'apache-tomcat-*' 2>/dev/null | sort -r | head -n1)
+ 	build_installed_json ${user}	
+       
+done
+ 
+ 

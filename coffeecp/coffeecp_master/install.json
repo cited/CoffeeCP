@@ -1,0 +1,44 @@
+[
+    {
+       "order" : 7,
+       "name" : "Java Tools",
+       "type" : "group",
+       "id" : "coffeecp_modplugins"
+    },
+    {
+       "icon" : "version.png",
+       "group_id" : "coffeecp_modplugins",
+       "order" : 1,
+       "name" : "Version",
+       "type" : "link",
+       "id" : "coffeecp_version",
+       "uri" : "coffeecp_version/index.live.php"
+    },
+    {
+       "icon" : "power.png",
+       "group_id" : "coffeecp_modplugins",
+       "order" : 2,
+       "name" : "Power",
+       "type" : "link",
+       "id" : "coffeecp_manage",
+       "uri" : "coffeecp_manage/index.live.php"
+    },
+    {
+           "icon" : "mapping.png",
+           "group_id" : "coffeecp_modplugins",
+           "order" : 3,
+           "name" : "Mappings",
+           "type" : "link",
+           "id" : "coffeecp_mapping",
+           "uri" : "coffeecp_mapping/index.live.php"
+    },
+    {
+       "icon" : "jdk.png",
+       "group_id" : "coffeecp_modplugins",
+       "order" : 4,
+       "name" : "JDK",
+       "type" : "link",
+       "id" : "coffeecp_jdk",
+       "uri" : "coffeecp_jdk/index.live.php"
+    }
+]

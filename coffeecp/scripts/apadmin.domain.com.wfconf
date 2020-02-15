@@ -1,0 +1,7 @@
+<VirtualHost *:9990>
+ServerAlias apadmin.domain.com domain.com
+ServerName apadmin.domain.com
+ProxyPass / http://localhost:4445/
+ProxyPassReverse / http://localhost:4445/
+ProxyPreserveHost On
+</VirtualHost>
