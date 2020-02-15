@@ -50,7 +50,7 @@ You will be prompted for the username, domain, and the amount of heap space (mem
 
  
 
-wget https://raw.githubusercontent.com/cited/CoffeeCP/blob/master/coffeecp-update-user.sh
+wget https://raw.githubusercontent.com/cited/CoffeeCP/master/coffeecp-update-user.sh
 
 chmod +x coffeecp_update_user.sh
 
