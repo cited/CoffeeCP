@@ -1,1 +1,526 @@
-test
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <title>CoffeeCP | Java for cPanel</title>
+	<meta name="description" content="CoffeeCP allows you to provision private JVMs on cPanel, Virtualmin, and Webmin. Tomcat, GlassFish, WildFly and more. Automated migration from NGASI.  " />
+	<meta name="keywords" content="Java, cPanel, Tomcat for cPanel, Tomcat Virtualmin, Tomcat Webmin, GlassFish cPanel, GlassFish Virtualmin, GlassFish Webmin,WildFly cPanel, NGASI alternative, WildFly Virtualmin, WildFly Webmin," />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="https://coffeecp.com/assets/bootstrap-min.css" media="screen">
+    <link rel="stylesheet" href="https://coffeecp.com/assets/coffee-custom.css">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+   <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,500,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+
+   <link rel="apple-touch-icon" sizes="57x57" href="https://coffeecp.com/favs/apple-icon-57x57.png">
+   <link rel="apple-touch-icon" sizes="60x60" href="/favs/apple-icon-60x60.png">
+   <link rel="apple-touch-icon" sizes="72x72" href="/favs/apple-icon-72x72.png">
+   <link rel="apple-touch-icon" sizes="76x76" href="/favs/apple-icon-76x76.png">
+   <link rel="apple-touch-icon" sizes="114x114" href="/favs/apple-icon-114x114.png">
+   <link rel="apple-touch-icon" sizes="120x120" href="/favs/apple-icon-120x120.png">
+   <link rel="apple-touch-icon" sizes="144x144" href="/favs/apple-icon-144x144.png">
+   <link rel="apple-touch-icon" sizes="152x152" href="/favs/apple-icon-152x152.png">
+   <link rel="apple-touch-icon" sizes="180x180" href="/favs/apple-icon-180x180.png">
+   <link rel="icon" type="image/png" sizes="192x192"  href="/favs/android-icon-192x192.png">
+   <link rel="icon" type="image/png" sizes="32x32" href="/favs/favicon-32x32.png">
+   <link rel="icon" type="image/png" sizes="96x96" href="/favs/favicon-96x96.png">
+   <link rel="icon" type="image/png" sizes="16x16" href="/favs/favicon-16x16.png">
+   <link rel="manifest" href="/favs/manifest.json">
+   <meta name="msapplication-TileColor" content="#ffffff">
+   <meta name="msapplication-TileImage" content="/favs/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+
+<style type="text/css">
+	.responsive {
+  width: 100%;
+  height: auto;
+}
+	 <style type="text/css">
+	
+  <style type="text/css">
+<!--
+.style1 {font-size: xx-large}
+.style2 {font-size: 24px}
+-->
+  </style>
+  
+
+  </head>
+  <body>
+    <div class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <a href="https://coffeecp.com/" class="navbar-brand">CoffeeCP</a>
+
+
+
+
+          <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        <div class="nav navbar-collapse collapse" id="navbar-main">
+          <ul class="nav navbar-nav navbar-right">
+            <li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="download" aria-expanded="false">Docs <span class="caret"></span></a>
+              <ul class="dropdown-menu" aria-labelledby="download">
+                 <li><a href="https://coffeecp.com/about">About Us</a></li>
+                <li class="divider"></li>
+                <li><a href="https://coffeecp.com/docs/webmin">Webmin Docs</a></li>
+                <li><a href="https://coffeecp.com/docs/virtualmin">Virtualmin Docs</a></li>
+                
+                <li><a href="https://coffeecp.com/docs/cpanel">cPanel Docs</a></li>
+			
+              </ul>
+            </li>
+          </ul>
+
+          
+
+        </div>
+      </div>
+    </div>
+
+
+    <div class="container">
+
+      <div class="page-header" id="banner">
+        <div class="row">
+          <div class="col-lg-12 col-md-12 col-sm-12">
+			  <p>&nbsp;</p>
+            <div align="center">
+				<h1 align="center" class="style1"><img src="https://coffeecp.com/images/coffeecp.gif"></h1></div>
+            <p align="center" class="lead">Java for cPanel </p>
+			<div align="center"><img src="https://coffeecp.com/images/coffeecp-java-for-cpanel-2.gif" class="responsive" style="width: 914px;"></div>
+
+          </div>
+
+        </div>
+        <div class="row">
+<p>&nbsp</p>
+<p>&nbsp</p><p>&nbsp</p>
+<p>&nbsp</p>
+
+<!-- Begin DigiCert site seal HTML and JavaScript -->
+
+
+<!-- End DigiCert site seal HTML and JavaScript -->
+
+</div>
+      </div>
+
+
+
+
+
+
+
+	  <div class="ccp-docs-section clearfix">
+        <div class="row">
+          <div class="col-lg-12">
+            <!--<div class="page-header">
+              <div align="center">
+                <h1 id="navbar">everywhere</h1>
+              </div>
+            </div>-->
+
+
+	  
+	  <div class="row">
+          <div class="col-lg-12">
+            <h2><p>&nbsp;</p></h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-4">
+            <div class="ccp-component">
+              <div align="center"><img src="https://coffeecp.com/images/cpanel.png" width="96" height="96"></div>
+			  <div align="center">
+			  <h3>cPanel</h3>
+			  <p>Provision Tomcat, GlassFish, and WildFly instantly! Clients access everything via cPanel. No extra control panels to install. Using NGASI? No problem. You can migrate in a few clicks!</p>
+            </div></div>
+          </div>
+          <div class="col-lg-4">
+            <div class="ccp-component">
+              <div align="center">              <img src="https://coffeecp.com/images/open-code.png" width="96" height="96"></div>
+			  			<div align="center">  <h3>Make It Your Own</h3>
+						<p>No links of branding. All customer-facing components can be customized on a per-server basis to suit your own brand and business needs. Use our pre-made templates or create your own. </p> </div>
+          </div>
+		  </div>
+          <div class="col-lg-4">
+            <div class="ccp-component">
+              <div align="center">			<img src="https://coffeecp.com/images/unlimited-installations.png" width="96" height="96"></div>
+<div align="center">			  			  <h3>Happy Everyone</h3><p>Built with PHP, JSON, and Perl, our modules have a tiny footprint. You never spend resources on our modules, only on customers. Customer will love the ease of use and control. </p></div>
+
+            </div>
+          </div>
+        </div><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p>
+	  <div align="center">			  			  <h3>No Extra Control Panel to Install</h3>
+	    <p> </p></div>
+	  <p>&nbsp;</p>
+	  	  <div align="center"><img src="https://coffeecp.com/images/cpanel-java-end-user-mod.gif" style="width: 80%; height: auto"></div>
+
+
+
+
+
+      <!-- Why CoffeeCP
+      ================================================== -->
+      <div class="ccp-docs-section clearfix">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="page-header">
+              <div align="center"><h1 id="navbar">Why CoffeeCP? </h1></div>
+            </div>
+
+            <div class="ccp-component">
+
+
+
+			 <div class="row">
+          <div class="col-lg-12">
+            <h2 id="type-blockquotes"></h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="ccp-component">
+              <blockquote>
+                <p>No Control Panels to Install
+</p>
+                </blockquote>
+							 <blockquote>
+                <p>Webmin, Virtualmin, and cPanel
+
+</p>
+                             </blockquote>
+							 <blockquote>
+                <p>Any version of Tomcat, GlassFish, and WildFly
+
+</p>
+                             </blockquote>
+
+							  <blockquote>
+                <p>Update Java Servers On-Demand
+
+</p>
+                             </blockquote>
+
+							 
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="ccp-component">
+              <blockquote class="blockquote-reverse">
+                <p>Provision and Manage Directly
+            </blockquote>
+
+			<blockquote class="blockquote-reverse">
+                <p>Tiny Footprint - Built with PHP and JSON
+            </blockquote>
+
+              <blockquote class="blockquote-reverse">
+                <p>Stop, Start, and Restart via cPanel
+
+            </blockquote>
+              <blockquote class="blockquote-reverse">
+                <p>One-click domain mapping via cPanel
+
+            </blockquote>
+
+			</blockquote>
+              
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+
+
+          </div>
+        </div>
+      </div>
+
+
+
+<div class="row" id="price">
+          <div class="col-lg-12">
+           <div align="center"> <h1>Get Started Now</h1></div>
+          </div>
+		  <p>&nbsp;</p>
+		  		  <p>&nbsp;</p>
+        </div>
+        
+          
+          <div class="col-lg-12">
+            <div class="ccp-component">
+              <div class="list-group" align="center">
+                <a href="#" class="list-group-item active">
+                     <h3>cPanel</h3>
+				  <h4>Free!</h4>               
+                </a>
+                 <a href="#" class="list-group-item" data-container="body" data-toggle="tooltip" data-placement="center" data-content="Install on as many VMs or servers as you want to." data-original-title="" title="Install on as many cPanel servers as you want to">Unlimited Installations
+                </a>
+                <a href="#" class="list-group-item" data-container="body" data-toggle="tooltip" data-placement="center" data-content="Provision and manage customer accounts directly on server" data-original-title="" title="Provision and Manage via WHMCS">Provision directly on server                </a>
+				<a href="#" class="list-group-item" data-container="body" data-toggle="tooltip" data-placement="center" data-content="Any version of Apache Tomcat" data-original-title="" title="Any version of Apache Tomcat">Apache Tomcat                  </a>
+
+				<a href="#" class="list-group-item" data-container="body" data-toggle="tooltip" data-placement="center" data-content="Any version of GlassFish" data-original-title="" title="Any version of GlassFish">GlassFish                </a>
+				 <a href="#" class="list-group-item" data-container="body" data-toggle="tooltip" data-placement="center" data-content="Any version of WildFly" data-original-title="" title="Any version of WildFly">WildFly                </a>
+
+				 <a href="#" class="list-group-item" data-container="body" data-toggle="tooltip" data-placement="center" data-content="Migrate from NGASI with our Migration Script" data-original-title="" title="NGASI Migration">NGASI Migration Script                 </a>
+				    
+					
+					  <a href="#" class="list-group-item" data-container="body" data-toggle="tooltip" data-placement="center" data-content="All customer-facing components are non-branded and fully customizable" data-original-title="" title="All customer-facing components are non-branded and fully customizable">Fully Customizable                </a>
+				   <a href="#" class="list-group-item" data-container="body" data-toggle="tooltip" data-placement="center" data-content="Support via Ticket and Email" data-original-title="" title="Support via Ticket">Optional Support                 </a>
+
+					  <a href="install-on-cpanel" class="list-group-item active" style="font-size: 28px">
+                  Install it Now                </a>
+
+
+              </div>
+            </div>
+          </div>
+          </div>
+		  <p>&nbsp;</p>
+		  		  <p>&nbsp;</p>
+		  <div align="center"><img src="https://coffeecp.com/images/pricing.gif" width="128" height="128">
+		    <span class="style2"><a href="support-and-installation/">Do you support, or installation?....</a></span></div>
+        </div>
+
+
+
+
+
+<div class="ccp-docs-section clearfix">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="page-header">
+              <h1 id="navbar" align="center">Who Uses CoffeeCP? </h1>
+            </div>
+
+            <div class="ccp-component" align="center" style="width: 100%; height: auto">
+			<img src="https://coffeecp.com/images/05_brand.gif">&nbsp;<img src="https://coffeecp.com/images/02_brand.gif">&nbsp;<img src="images/01_brand.gif">&nbsp;<img src="images/03_brand.gif">&nbsp;<img src="images/06_brand.gif">&nbsp;<img src="images/04_brand.gif">&nbsp;<img src="images/07_brand.gif">
+
+			 <div class="row">
+          <div class="col-lg-12">
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <div class="ccp-docs-section">
+
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="page-header">
+              <h1 id="dialogs">FAQs</h1>
+            </div>
+			  
+			  
+
+			<p style="color:#0099CC">Does CoffeeCP use a lot of resources. ?<p>
+
+			<p>No. CoffeeCP is built with PHP, JSON, and Perl. It's small, simple, and smart. This gives it a very small footprint.<p>
+
+						<p>&nbsp;</p>
+			  
+			  
+			  <p style="color:#0099CC">Is support available?<p>
+
+			<p>CoffeeCP is simple and easy to install and use.  We do also offer installation, migration, and per-ticket support if needed. <p>
+
+						<p>&nbsp;</p>
+			  
+			  
+			<p style="color:#0099CC">How long have you been doing this?<p>
+
+			<p>The product is offered via Cited, Inc. We are in our 11th year of hosting.<p>
+
+						<p>&nbsp;</p>
+
+
+			<p style="color:#0099CC">Is there any links or branding?<p>
+
+			<p>No. There are no links or other branding on any of our products. You can also customize all customer-facing components to suit your needs.<p>
+			<p>&nbsp;</p>
+
+			<p style="color:#0099CC">Does CoffeeCP alter my control panel ?<p>
+
+			<p>No. All CoffeeCP products use native Webmin/Virtualmin/cPanel functions and can be removed in seconds with no impact. You do not need to alter your services to use CoffeeCP.<p>
+			<p>&nbsp;</p>
+
+			<p style="color:#0099CC">Is this a container ?<p>
+
+			<p>No. CoffeeCP is vanilla Perl/PHP meant to run on vanilla control panels on vanilla operating systems.<p>
+
+			<p>&nbsp;</p>
+			<p style="color:#0099CC">Is CoffeeCP secure ?<p>
+
+			<p>Yes. CoffeeCP does not require you to install a new control panel, open ports, or change basic control panel functioning.<p>
+			<p>&nbsp;</p>
+			<p style="color:#0099CC">Can I migrate from NGASI ?<p>
+
+			<p>Migrating from NGASI is simple and straight forward. We offer both a migration guide as well as a script. We also offer a migration service if you are not the hands-on type.<p>
+
+			<p>&nbsp;</p>
+			<p style="color:#0099CC">Who uses CoffeeCP ?<p>
+
+			<p>The technology developed by CoffeeCP is in use by customers in over 70 countries worldwide, including some of world's leading research and academic institutions as well as national goverments and NGOs.<p>
+			<p>&nbsp;</p>
+          </div>
+        </div>
+
+
+
+
+
+
+<div class="ccp-docs-section">
+
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="page-header">
+              <h1 id="dialogs">Compare</h1>
+            </div>
+
+			<div class="row">
+          <div class="col-lg-12">
+
+
+             <div align="center"><h3> <a href="coffeecp-vs-ngasi/">CoffeeCP vs NGASI</a> </h3>
+             </div>
+
+
+          </div>
+        </div>
+
+
+
+      <!-- Screenshots
+      ================================================== -->
+      <div class="ccp-docs-section">
+
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="page-header">
+				 <h1 id="dialogs">Additional Services</h1>
+				<p>&nbsp;</p>
+				
+              <h3 id="dialogs">Webmin</h3>
+				 <h4 id="dialogs">CoffeeCP for Webmin provides complete provisioning and management as well as load balancing.</h4>
+            </div>
+
+			<div class="row">
+          <div class="col-lg-12">
+           <div class="ccp-component">
+              <div class="modal">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+
+                    <div class="modal-body">
+                     <div align="center" style="width: 100%; height: auto"><img src="images/java-for-webmin.gif" style="width: 90%; height: auto"></div>
+                    </div>
+
+
+            </div>
+          </div>
+
+
+          </div>
+        </div>
+
+
+		<div class="ccp-docs-section">
+
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="page-header">
+              <h3 id="dialogs">Virtualmin</h3>
+				 <h4 id="dialogs">CoffeeCP for Virtualmin provides complete provisioning and management as well as load balancing.</h4>
+            </div>
+
+			<div class="row">
+          <div class="col-lg-12">
+
+            <div class="ccp-component">
+              <div class="modal">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+
+                    <div class="modal-body">
+                     <div align="center" style="width: 100%; height: auto"><img src="images/virtualmin.gif" style="width: 90%; height: auto"></div>
+                    </div>
+
+                  </div>
+                </div>
+
+
+
+          </div>
+        </div>
+      <div class="ccp-docs-section">
+
+        <div class="row">
+          
+<!-- Begin DigiCert site seal HTML and JavaScript -->
+
+<!-- End DigiCert site seal HTML and JavaScript -->
+
+          </div>
+        </div>
+
+
+      <footer>
+        <div class="row">
+          <div class="col-lg-12">
+
+            <ul class="list-unstyled">
+              <li class="pull-right"><a href="#top">Back to top</a></li>
+              <li><a href="https://coffeecp.com/docs">Docs</a></li>
+              <li><a href="https://coffeecp.com/about/">About</a></li>
+              <li><a href="https://coffeecp.com/terms-of-service.html">Terms</a></li>
+              
+            </ul>
+            <p>&copy; 2019 <a href="https://www.citedcorp.com" target="_blank" >Cited, Inc.</a></p>
+<p>&nbsp;</p>
+            <p>Built with <a href="https://tomcat.apache.org/" target="_blank">Apache Tomcat,&nbsp; </a>  <a href="https://openjdk.java.net/" rel="nofollow" target="_blank">OpenJDK</a>, &nbsp;and <a href="https://getbootstrap.com/" rel="nofollow" target="_blank">&nbsp;BootStrap</a>. &nbsp;Served fresh by <a href="#">CoffeeCP</a>.</p>
+
+          </div>
+        </div>
+
+      </footer>
+
+
+    </div>
+
+
+
+    <script src="https://coffeecp.com/assets/jquery-1.js"></script>
+    <script src="https://coffeecp.com/assets/bootstrap.js"></script>
+	<script src="https://coffeecp.com/assets/custom.js"></script>
+
+
+
+</body>
+</html>
